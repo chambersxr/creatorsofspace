@@ -353,137 +353,28 @@
         <script src="js/isotope.pkgd.min.js"></script>  
         <script src="js/jquery.magnific-popup.js"></script>  
         <script src="js/plugins.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbblbfC2kR48yVAuBF6b5Oe_9xANxXJKA&callback=console.debug&libraries=maps,marker&v=beta"></script>
-
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbblbfC2kR48yVAuBF6b5Oe_9xANxXJKA&libraries=maps,marker&v=beta"></script>
+       
         <script>
-            function initMap() {
+            function init() {
                 var mapOptions = {
                     zoom: 11,
                     scrollwheel: false,
-                    center: { lat: 39.9862, lng: -83.0447 },
-                    styles: [
-                        {
-                            "featureType": "all",
-                            "elementType": "labels.text.fill",
-                            "stylers": [
-                                { "saturation": 36 },
-                                { "color": "#000000" },
-                                { "lightness": 40 }
-                            ]
-                        },
-                        {
-                            "featureType": "all",
-                            "elementType": "labels.text.stroke",
-                            "stylers": [
-                                { "visibility": "on" },
-                                { "color": "#000000" },
-                                { "lightness": 16 }
-                            ]
-                        },
-                        {
-                            "featureType": "all",
-                            "elementType": "labels.icon",
-                            "stylers": [
-                                { "visibility": "off" }
-                            ]
-                        },
-                        {
-                            "featureType": "administrative",
-                            "elementType": "geometry.fill",
-                            "stylers": [
-                                { "color": "#000000" },
-                                { "lightness": 20 }
-                            ]
-                        },
-                        {
-                            "featureType": "administrative",
-                            "elementType": "geometry.stroke",
-                            "stylers": [
-                                { "color": "#000000" },
-                                { "lightness": 17 },
-                                { "weight": 1.2 }
-                            ]
-                        },
-                        {
-                            "featureType": "landscape",
-                            "elementType": "geometry",
-                            "stylers": [
-                                { "color": "#000000" },
-                                { "lightness": 20 }
-                            ]
-                        },
-                        {
-                            "featureType": "poi",
-                            "elementType": "geometry",
-                            "stylers": [
-                                { "color": "#000000" },
-                                { "lightness": 21 }
-                            ]
-                        },
-                        {
-                            "featureType": "road.highway",
-                            "elementType": "geometry.fill",
-                            "stylers": [
-                                { "color": "#000000" },
-                                { "lightness": 17 }
-                            ]
-                        },
-                        {
-                            "featureType": "road.highway",
-                            "elementType": "geometry.stroke",
-                            "stylers": [
-                                { "color": "#000000" },
-                                { "lightness": 29 },
-                                { "weight": 0.2 }
-                            ]
-                        },
-                        {
-                            "featureType": "road.arterial",
-                            "elementType": "geometry",
-                            "stylers": [
-                                { "color": "#000000" },
-                                { "lightness": 18 }
-                            ]
-                        },
-                        {
-                            "featureType": "road.local",
-                            "elementType": "geometry",
-                            "stylers": [
-                                { "color": "#000000" },
-                                { "lightness": 16 }
-                            ]
-                        },
-                        {
-                            "featureType": "transit",
-                            "elementType": "geometry",
-                            "stylers": [
-                                { "color": "#000000" },
-                                { "lightness": 19 }
-                            ]
-                        },
-                        {
-                            "featureType": "water",
-                            "elementType": "geometry",
-                            "stylers": [
-                                { "color": "#000000" },
-                                { "lightness": 17 }
-                            ]
-                        }
-                    ]
+                    center: new google.maps.LatLng(39.9862, -83.0447),
+                    styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
                 };
-
                 var mapElement = document.getElementById('googleMap');
                 var map = new google.maps.Map(mapElement, mapOptions);
-
                 var marker = new google.maps.Marker({
-                    position: {lat: 39.9862, lng: -83.0447},
+                    position: new google.maps.LatLng(39.9862, -83.0447),
                     map: map,
                     icon: 'img/map-marker.png',
-                    animation: google.maps.Animation.BOUNCE,
+                    animation:google.maps.Animation.BOUNCE,
                     title: 'Creators of Space'
                 });
             }
-        </script>
+            google.maps.event.addDomListener(window, 'load', init);
+		</script>
         <script src="js/main.js"></script>
     </body>
 </html>
