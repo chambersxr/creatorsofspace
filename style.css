@@ -1814,7 +1814,7 @@ p.bold{
     display: block;
     font-size: 18px;
     font-weight: 700;
-    color: #666666;
+    color: #FFFFFF;
     text-transform: uppercase;
 }
 .section-tab-menu ul li:hover a, .section-tab-menu ul li a.active{
