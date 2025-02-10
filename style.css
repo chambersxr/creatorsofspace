@@ -1733,7 +1733,7 @@ p.bold{
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #BBBBBB;
+    background: #FFFFFF;
     width: 100px;
     height: 1px;
     content: "";
@@ -1827,7 +1827,7 @@ p.bold{
     width: 50px;
 }
 .single-tab p{
-    color: #555555;
+    color: #ffffff;
 }
 .single-tab p:first-child{margin-bottom: 20px}
 /*----------------------------------------*/
