@@ -1215,12 +1215,13 @@ a, i, button, img, input, span, *::before, *::after {
 }
 p.bold{
     font-size: 18px;
-    color: #666666;
+    color: #FFFFFF;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
     line-height: 28px;
     margin-bottom: 30px;
 }
+
 .about-content a{
     margin-top: 35px;
     box-shadow: 0 1px 10px rgba(59, 59, 59, 0.1);
@@ -1713,9 +1714,11 @@ p.bold{
 }
 .about-content {
   margin-top: 11px;
+    color: #FFFFFF;
 }
 .who-two .who-content {
   margin-top: 26px;
+    color: #FFFFFF;
 }
 .who-area .video-icon i {color: #3ba5f7}
 .about-area.three .video-icon i:hover{background: #3ba5f7; color: #fff}
@@ -1734,6 +1737,7 @@ p.bold{
     left: 0;
     bottom: 0;
     background: #FFFFFF;
+    color: #FFFFFF;
     width: 100px;
     height: 1px;
     content: "";
@@ -1827,7 +1831,7 @@ p.bold{
     width: 50px;
 }
 .single-tab p{
-    color: #ffffff;
+    color: #FFFFFF;
 }
 .single-tab p:first-child{margin-bottom: 20px}
 /*----------------------------------------*/
